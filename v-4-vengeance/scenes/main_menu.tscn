@@ -71,7 +71,7 @@ theme_override_constants/margin_bottom = 50
 layout_mode = 2
 theme_override_constants/separation = 18
 
-[node name="start_game_anthony" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1550422378]
+[node name="start_game" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1550422378]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -83,9 +83,9 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_vue75")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_l6cm7")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ekxnf")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_l6cm7")
-text = "start game (anthony)"
+text = "start game"
 
-[node name="start_game_esraa" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1858969780]
+[node name="esraa_sandbox" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1858969780]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -97,9 +97,9 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_vue75")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_l6cm7")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ekxnf")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_l6cm7")
-text = "start game (esraa)"
+text = "Amr's sandbox"
 
-[node name="start_game_amr" type="Button" parent="MarginContainer/VBoxContainer" unique_id=659969022]
+[node name="amr_sandbox" type="Button" parent="MarginContainer/VBoxContainer" unique_id=659969022]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -111,8 +111,38 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_vue75")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_l6cm7")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ekxnf")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_l6cm7")
-text = "start game (amr)"
+text = "Esraa's sandbox"
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/start_game_anthony" to="." method="_on_start_game_anthony_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/start_game_esraa" to="." method="_on_start_game_esraa_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/start_game_amr" to="." method="_on_start_game_amr_pressed"]
+[node name="anthony_sandbox" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1877621534]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 31
+theme_override_styles/normal = SubResource("StyleBoxFlat_vue75")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_l6cm7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ekxnf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_l6cm7")
+text = "Anthony's sandbox"
+
+[node name="nitya_sandbox" type="Button" parent="MarginContainer/VBoxContainer" unique_id=554953106]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 31
+theme_override_styles/normal = SubResource("StyleBoxFlat_vue75")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_l6cm7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ekxnf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_l6cm7")
+text = "Nitya's sandbox"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/start_game" to="." method="_on_start_game_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/esraa_sandbox" to="." method="_on_esraa_sandbox_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/amr_sandbox" to="." method="_on_amr_sandbox_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/anthony_sandbox" to="." method="_on_anthony_sandbox_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/nitya_sandbox" to="." method="_on_nitya_sandbox_pressed"]

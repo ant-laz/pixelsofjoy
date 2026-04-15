@@ -14,13 +14,22 @@
 
 extends Control
 
-func _on_start_game_anthony_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/level_anthony.tscn")
+
+func _on_start_game_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/game.tscn")
 
 
-func _on_start_game_esraa_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/level_esraa.tscn")
+func _on_amr_sandbox_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/sandbox_amr.tscn")
 
 
-func _on_start_game_amr_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/level_amr.tscn")
+func _on_esraa_sandbox_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/sandbox_esraa.tscn")
+
+
+func _on_anthony_sandbox_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/sandbox_anthony.tscn")
+
+
+func _on_nitya_sandbox_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/sandbox_nitya.tscn")
