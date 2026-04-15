@@ -1,0 +1,118 @@
+[gd_scene format=3 uid="uid://ca76uj50ruovn"]
+
+[ext_resource type="Script" uid="uid://bb22w0e2mjm7t" path="res://scripts/main_menu.gd" id="1_ekxnf"]
+[ext_resource type="Texture2D" uid="uid://76upjae5nn5g" path="res://assets/sprites/home_screen_background.png" id="1_l6cm7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ekxnf"]
+texture = ExtResource("1_l6cm7")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vue75"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.19215687)
+shadow_size = 5
+shadow_offset = Vector2(0, 3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l6cm7"]
+bg_color = Color(0.15487596, 0.154876, 0.15487596, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.19215687)
+shadow_size = 5
+shadow_offset = Vector2(0, 3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ekxnf"]
+bg_color = Color(0.4045111, 0.40451115, 0.4045111, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.19215687)
+shadow_size = 5
+shadow_offset = Vector2(0, 3)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l6cm7"]
+
+[node name="main_menu" type="Control" unique_id=1513568791]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ekxnf")
+
+[node name="Panel" type="Panel" parent="." unique_id=1040317553]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ekxnf")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1664418104]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -218.0
+offset_right = 440.0
+grow_vertical = 0
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=2019413611]
+layout_mode = 2
+theme_override_constants/separation = 18
+
+[node name="start_game_anthony" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1550422378]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 31
+theme_override_styles/normal = SubResource("StyleBoxFlat_vue75")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_l6cm7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ekxnf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_l6cm7")
+text = "start game (anthony)"
+
+[node name="start_game_esraa" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1858969780]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 31
+theme_override_styles/normal = SubResource("StyleBoxFlat_vue75")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_l6cm7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ekxnf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_l6cm7")
+text = "start game (esraa)"
+
+[node name="start_game_amr" type="Button" parent="MarginContainer/VBoxContainer" unique_id=659969022]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 31
+theme_override_styles/normal = SubResource("StyleBoxFlat_vue75")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_l6cm7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ekxnf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_l6cm7")
+text = "start game (amr)"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/start_game_anthony" to="." method="_on_start_game_anthony_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/start_game_esraa" to="." method="_on_start_game_esraa_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/start_game_amr" to="." method="_on_start_game_amr_pressed"]
