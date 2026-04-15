@@ -47,6 +47,12 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_o2qa2"]
 radius = 4.0
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g2els"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qhqgy"]
+bg_color = Color(0.6278126, 0.9988658, 1.540184e-06, 1)
+corner_detail = 1
+
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1968310530]
 scale = Vector2(2, 2)
 script = ExtResource("1_g2els")
@@ -63,3 +69,15 @@ shape = SubResource("CircleShape2D_o2qa2")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1115360853]
 scale = Vector2(0.5, 0.5)
 zoom = Vector2(4, 4)
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=2123217902]
+offset_left = -7.0
+offset_top = -11.0
+offset_right = 53.64559
+offset_bottom = 1.3614082
+scale = Vector2(0.23909405, 0.23909405)
+theme_override_styles/background = SubResource("StyleBoxFlat_g2els")
+theme_override_styles/fill = SubResource("StyleBoxFlat_qhqgy")
+step = 1.0
+value = 55.0
+show_percentage = false

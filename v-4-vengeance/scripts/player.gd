@@ -17,8 +17,12 @@ extends CharacterBody2D
 @export var speed := 200.0
 @onready var joystick = $"../CanvasLayer/Virtual Joystick"  # adjust path if needed
 @onready var anim = $AnimatedSprite2D
+@onready var HealthBar = $ProgressBar
 
 var health = 100
+
+func _ready():
+	HealthBar.value = health
 
 func _physics_process(delta: float) -> void:
 	var direction: Vector2 = joystick.output
@@ -41,6 +45,7 @@ func _physics_process(delta: float) -> void:
 func take_damage(amount: int):
 	health -= amount
 	health = max(health, 0)
+	HealthBar.value = health
 	
 	if health == 0:
 		emit_signal("died")

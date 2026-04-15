@@ -11,6 +11,8 @@ region = Rect2(37.86955, 232.47682, 21.629631, 22.222214)
 
 [node name="Bullet" type="Area2D" unique_id=942440377]
 scale = Vector2(0.27372214, 0.27372214)
+collision_layer = 513
+collision_mask = 6
 script = ExtResource("1_v8qja")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1199219214]
