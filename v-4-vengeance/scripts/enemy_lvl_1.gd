@@ -18,22 +18,31 @@ extends CharacterBody2D
 # credit to these resources for enemy logic: 
 # https://kidscancode.org/godot_recipes/4.x/ai/chasing/index.html
 # https://dev.to/christinec_dev/lets-learn-godot-4-by-making-an-rpg-part-9-enemy-ai-setup-3nfl
+# https://www.youtube.com/watch?v=GwCiGixlqiU&t=5808s
+# https://www.youtube.com/watch?v=BAUn-lGBXMw&list=PLtosjGHWDab682nfZ1f6JSQ1cjap7Ieeb&index=3
 
 @export var speed = 25
 @export var health = 10
-@export var damage_per_bullet_hit = 1
+@export var damage_received_from_bullet = 1
+@export var damage_dealt_to_player = 1
 
 #TODO programmatically set this
 @onready
-var player = get_node("/root/level_anthony/player") 
+var player = get_node("/root/level_anthony/CharacterBody2D")
+@onready
+var anim = %enemy_lvl_1_sprite
+
+func _ready():
+	anim.play("run")
 
 func _physics_process(delta: float) -> void:
 	velocity = global_position.direction_to(player.global_position) * speed
 	move_and_slide()
 
 func take_damage() -> void:
-	health -= damage_per_bullet_hit
+	health -= damage_received_from_bullet
 	health = max(0, health)
 	if health == 0:
-		pass
+		queue_free()
+		anim.play("death")
 	
