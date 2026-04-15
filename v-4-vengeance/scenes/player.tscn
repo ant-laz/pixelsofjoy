@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dxx6gftood01p"]
 
-[ext_resource type="Script" uid="uid://bv87umcs6snuh" path="res://scenes/player.gd" id="1_g2els"]
+[ext_resource type="Script" uid="uid://bv87umcs6snuh" path="res://scripts/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://bhrdxw1sppnri" path="res://assets/sprites/SquadLeader.png" id="2_qhqgy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pli5m"]

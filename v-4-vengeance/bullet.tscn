@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://d1edwipuqg4ej"]
+
+[ext_resource type="Texture2D" uid="uid://bhtkk6fu0q31f" path="res://assets/sprites/tech_dungeon_roguelite_asset_pack_v7/Projectiles/projectiles x3.png" id="1_v7oki"]
+[ext_resource type="Script" uid="uid://dgi64k76at5a0" path="res://scripts/bullet.gd" id="1_v8qja"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v8qja"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t4vbm"]
+atlas = ExtResource("1_v7oki")
+region = Rect2(37.86955, 232.47682, 21.629631, 22.222214)
+
+[node name="Bullet" type="Area2D" unique_id=942440377]
+scale = Vector2(0.27372214, 0.27372214)
+script = ExtResource("1_v8qja")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1199219214]
+shape = SubResource("CircleShape2D_v8qja")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1223901262]
+texture = SubResource("AtlasTexture_t4vbm")
