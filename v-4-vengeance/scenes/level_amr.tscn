@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://27kuf1kjma4"]
+
+[ext_resource type="Script" uid="uid://bv87umcs6snuh" path="res://scenes/player.gd" id="1_6ough"]
+[ext_resource type="Texture2D" uid="uid://bhrdxw1sppnri" path="res://assets/sprites/SquadLeader.png" id="2_ujmox"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pli5m"]
+atlas = ExtResource("2_ujmox")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n3m1j"]
+atlas = ExtResource("2_ujmox")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yeqm5"]
+atlas = ExtResource("2_ujmox")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_en6ml"]
+atlas = ExtResource("2_ujmox")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nog8i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pli5m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n3m1j")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yeqm5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_en6ml")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tm2gv"]
+radius = 4.0
+
+[node name="level_amr" type="Node2D" unique_id=2050603229]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1599247825]
+script = ExtResource("1_6ough")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=301729216]
+sprite_frames = SubResource("SpriteFrames_nog8i")
+frame = 1
+frame_progress = 0.013888193
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=154838010]
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_tm2gv")
