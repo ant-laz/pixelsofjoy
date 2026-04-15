@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://pni25d668od3"]
+
+[ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="1_k2urb"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1013650458]
+
+[node name="Virtual Joystick" parent="." unique_id=2012187096 instance=ExtResource("1_k2urb")]
+anchors_preset = 0
+anchor_top = 0.0
+anchor_bottom = 0.0
+offset_left = 103.0
+offset_top = 543.0
+offset_right = 175.0
+offset_bottom = 666.0
+grow_vertical = 1

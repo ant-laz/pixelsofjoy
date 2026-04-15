@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="1_h3cky"]
 [ext_resource type="PackedScene" uid="uid://dxx6gftood01p" path="res://scenes/player.tscn" id="1_vguio"]
 [ext_resource type="Texture2D" uid="uid://cd55xk6w4qcpb" path="res://assets/sprites/scifi_facility_tileset.png" id="3_h3cky"]
+[ext_resource type="PackedScene" uid="uid://b78d02404447s" path="res://scenes/pistol.tscn" id="4_o2qa2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nkd52"]
 size = Vector2(64, 64)
@@ -10,6 +11,9 @@ size = Vector2(64, 64)
 [node name="level_amr" type="Node2D" unique_id=2050603229]
 
 [node name="Player" parent="." unique_id=1968310530 instance=ExtResource("1_vguio")]
+
+[node name="Pistol" parent="Player" unique_id=432423521 instance=ExtResource("4_o2qa2")]
+scale = Vector2(0.5, 0.5)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=131643412]
 

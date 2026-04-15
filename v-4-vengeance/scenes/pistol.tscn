@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://b78d02404447s"]
+
+[ext_resource type="Script" uid="uid://cyqmur6avc6yy" path="res://scenes/pistol.gd" id="1_buff3"]
+[ext_resource type="Texture2D" uid="uid://cdxi2dbpran3w" path="res://assets/sprites/pistol.png" id="1_igbvm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_buff3"]
+radius = 161.00311
+
+[node name="Pistol" type="Area2D" unique_id=1802066671]
+script = ExtResource("1_buff3")
+
+[node name="PistolSprite" type="Sprite2D" parent="." unique_id=1425707294]
+position = Vector2(16, -4)
+scale = Vector2(0.36945206, 0.36945206)
+texture = ExtResource("1_igbvm")
+
+[node name="ShootingPoint" type="Marker2D" parent="." unique_id=750301494]
+position = Vector2(24.158907, -7.5064893)
+
+[node name="WeaponPivot" type="Marker2D" parent="." unique_id=1985502383]
+
+[node name="FireTimer" type="Timer" parent="." unique_id=692822803]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1958848439]
+shape = SubResource("CircleShape2D_buff3")
