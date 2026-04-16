@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://pni25d668od3" path="res://scenes/joystick_canvas.tscn" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://dfpifnxk1r81f" path="res://scenes/enemy_lvl_1.tscn" id="6_p57ef"]
 [ext_resource type="FontFile" uid="uid://b344rxcq81ac" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="7_gee14"]
+[ext_resource type="AudioStream" uid="uid://bkx31ndjcirnk" path="res://assets/music/michitheonlyone-foxeaglion-milky-way-dreamy-fantasy-retrosynth-synthwave-music-194438.mp3" id="9_0tnpc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lbhrr"]
 texture = ExtResource("1_yqjtg")
@@ -955,6 +956,7 @@ text = "Enemies killed:
 position = Vector2(394, 1001)
 
 [node name="game_over" type="CanvasLayer" parent="." unique_id=821481318]
+visible = false
 
 [node name="game_over_background" type="Panel" parent="game_over" unique_id=876598371]
 anchors_preset = 15
@@ -1003,5 +1005,12 @@ theme_override_fonts/font = ExtResource("7_gee14")
 theme_override_font_sizes/font_size = 30
 text = "revive me (watch an ad)
 "
+
+[node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=639071072]
+stream = ExtResource("9_0tnpc")
+autoplay = true
+max_distance = 4000.0
+attenuation = 1e-05
+bus = &"Music"
 
 [connection signal="enemy_died" from="enemy_lvl_1" to="." method="_on_enemy_died"]
