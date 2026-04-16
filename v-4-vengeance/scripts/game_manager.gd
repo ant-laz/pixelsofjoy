@@ -34,3 +34,9 @@ func _input(event):
 func update_monster_display():
 	MonsterLabel.text = str(monster_count)
 	
+
+
+func _on_player_died() -> void:
+	is_stopped = true 
+	# Here we should show the game over screen.
+	print("Player is down! Stopwatch paused.") 
