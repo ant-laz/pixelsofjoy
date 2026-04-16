@@ -44,11 +44,11 @@ func _physics_process(delta: float) -> void:
 func deal_damage():
 	return damage_dealt_to_player
 
-func take_damage() -> void:
-	health -= damage_received_from_bullet
+func take_damage(damage) -> void:
+	health -= damage
 	health = max(0, health)
 	healthbar.value = health
 	if health == 0:
-		queue_free()
 		anim.play("death")
+		queue_free()
 	
