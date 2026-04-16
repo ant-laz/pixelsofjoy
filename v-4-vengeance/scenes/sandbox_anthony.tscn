@@ -692,7 +692,7 @@ tile_set = SubResource("TileSet_qquau")
 position = Vector2(244, 409)
 collision_layer = 2
 
-[node name="CharacterBody2D" parent="." unique_id=1968310530 groups=["player"] instance=ExtResource("4_er6ih")]
+[node name="CharacterBody2D" parent="." unique_id=1968310530 instance=ExtResource("4_er6ih")]
 position = Vector2(550, 361)
 
 [node name="Pistol" parent="CharacterBody2D" unique_id=1802066671 instance=ExtResource("5_2syum")]

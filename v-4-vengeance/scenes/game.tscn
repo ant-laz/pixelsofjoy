@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b78d02404447s" path="res://scenes/pistol.tscn" id="4_iywne"]
 [ext_resource type="PackedScene" uid="uid://pni25d668od3" path="res://scenes/joystick_canvas.tscn" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://dfpifnxk1r81f" path="res://scenes/enemy_lvl_1.tscn" id="6_p57ef"]
+[ext_resource type="FontFile" uid="uid://b344rxcq81ac" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="7_gee14"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lbhrr"]
 texture = ExtResource("1_yqjtg")
@@ -697,6 +698,32 @@ position = Vector2(286, 220)
 scale = Vector2(0.5, 0.5)
 
 [node name="CanvasLayer" parent="." unique_id=1013650458 instance=ExtResource("5_iywne")]
+
+[node name="TimerLabel" type="Label" parent="CanvasLayer" unique_id=159843167]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -71.5
+offset_top = 10.0
+offset_right = 71.5
+offset_bottom = 41.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.3254902, 1, 1, 1)
+theme_override_fonts/font = ExtResource("7_gee14")
+theme_override_font_sizes/font_size = 30
+text = "00:00"
+
+[node name="MonsterCountLabel" type="Label" parent="CanvasLayer" unique_id=1337581113]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_top = 10.0
+offset_bottom = 41.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("7_gee14")
+theme_override_font_sizes/font_size = 30
+text = "0"
 
 [node name="enemy_lvl_1" parent="." unique_id=1652752734 instance=ExtResource("6_p57ef")]
 position = Vector2(394, 1001)

@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b78d02404447s" path="res://scenes/pistol.tscn" id="5_5wcva"]
 [ext_resource type="PackedScene" uid="uid://pni25d668od3" path="res://scenes/joystick_canvas.tscn" id="5_rdgid"]
 [ext_resource type="FontFile" uid="uid://b344rxcq81ac" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="6_pxeqj"]
-[ext_resource type="PackedScene" path="res://scenes/enemy_lvl_1.tscn" id="8_rdgid"]
+[ext_resource type="PackedScene" uid="uid://dfpifnxk1r81f" path="res://scenes/enemy_lvl_1.tscn" id="8_rdgid"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4ol0d"]
 texture = ExtResource("2_6bc2g")
@@ -726,7 +726,7 @@ sources/0 = SubResource("TileSetAtlasSource_lalfc")
 script = ExtResource("1_dkvw5")
 
 [node name="Timer" type="Timer" parent="." unique_id=1310783858]
-wait_time = 10.0
+wait_time = 6000.0
 autostart = true
 
 [node name="floor" type="TileMapLayer" parent="." unique_id=1359022893]
@@ -741,7 +741,7 @@ tile_set = SubResource("TileSet_e7kwy")
 tile_map_data = PackedByteArray("AAAIAAQAAAADAAYAAAAIAAUAAAADAAcAAAAJAAUAAAADAAYAAAAJAAYAAAADAAcAAAAKAAYAAAADAAYAAAAKAAcAAAADAAcAAAAEAAAAAAAAAAQAAAAFAAAAAAABAAQAAAAIAAAAAAALAAUAAAA=")
 tile_set = SubResource("TileSet_2qrjt")
 
-[node name="CharacterBody2D" parent="." unique_id=1968310530 groups=["player"] instance=ExtResource("4_5wcva")]
+[node name="CharacterBody2D" parent="." unique_id=1968310530 instance=ExtResource("4_5wcva")]
 position = Vector2(425, 470)
 
 [node name="Pistol" parent="CharacterBody2D" unique_id=1802066671 instance=ExtResource("5_5wcva")]
