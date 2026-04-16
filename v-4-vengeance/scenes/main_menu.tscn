@@ -97,7 +97,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_vue75")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_l6cm7")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ekxnf")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_l6cm7")
-text = "Amr's sandbox"
+text = "Esraa's sandbox"
 
 [node name="amr_sandbox" type="Button" parent="MarginContainer/VBoxContainer" unique_id=659969022]
 layout_mode = 2
@@ -111,7 +111,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_vue75")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_l6cm7")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ekxnf")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_l6cm7")
-text = "Esraa's sandbox"
+text = "Amr's sandbox"
 
 [node name="anthony_sandbox" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1877621534]
 layout_mode = 2
