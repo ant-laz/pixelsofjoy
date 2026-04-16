@@ -690,7 +690,7 @@ tile_set = SubResource("TileSet_qquau")
 [node name="enemy_lvl_1" parent="." unique_id=1652752734 instance=ExtResource("5_5ikfq")]
 position = Vector2(244, 409)
 
-[node name="CharacterBody2D" parent="." unique_id=1968310530 instance=ExtResource("4_er6ih")]
+[node name="CharacterBody2D" parent="." unique_id=1968310530 groups=["player"] instance=ExtResource("4_er6ih")]
 position = Vector2(550, 361)
 
 [node name="CanvasLayer" parent="." unique_id=1013650458 instance=ExtResource("5_qquau")]

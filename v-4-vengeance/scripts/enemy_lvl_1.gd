@@ -26,9 +26,8 @@ extends CharacterBody2D
 @export var damage_received_from_bullet = 1
 @export var damage_dealt_to_player = 1
 
-#TODO programmatically set this
 @onready
-var player = get_node("/root/level_anthony/CharacterBody2D")
+var player = get_tree().get_first_node_in_group("player")
 @onready
 var anim = %enemy_lvl_1_sprite
 
