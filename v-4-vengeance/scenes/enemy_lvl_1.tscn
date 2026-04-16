@@ -156,6 +156,20 @@ animations = [{
 radius = 33.0
 height = 92.0
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_huous"]
+bg_color = Color(0.5358906, 0.53965294, 0.542866, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xaxbr"]
+bg_color = Color(0, 0.45676988, 0.8818692, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
 [node name="enemy_lvl_1" type="CharacterBody2D" unique_id=1652752734 groups=["enemies"]]
 collision_mask = 7
 script = ExtResource("1_huous")
@@ -169,3 +183,14 @@ autoplay = "idle"
 [node name="enemy_lvl_1_collision_shape" type="CollisionShape2D" parent="." unique_id=626040008]
 position = Vector2(0, -3)
 shape = SubResource("CapsuleShape2D_h2hsv")
+
+[node name="enemy_lvl_1_health_bar" type="ProgressBar" parent="." unique_id=1868225957]
+unique_name_in_owner = true
+offset_left = -23.0
+offset_top = -62.0
+offset_right = 22.0
+offset_bottom = -52.0
+theme_override_styles/background = SubResource("StyleBoxFlat_huous")
+theme_override_styles/fill = SubResource("StyleBoxFlat_xaxbr")
+value = 50.0
+show_percentage = false

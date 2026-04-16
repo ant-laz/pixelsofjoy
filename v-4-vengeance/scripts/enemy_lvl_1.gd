@@ -21,17 +21,20 @@ extends CharacterBody2D
 # https://www.youtube.com/watch?v=GwCiGixlqiU&t=5808s
 # https://www.youtube.com/watch?v=BAUn-lGBXMw&list=PLtosjGHWDab682nfZ1f6JSQ1cjap7Ieeb&index=3
 
-@export var speed = 25
-@export var health = 10
-@export var damage_received_from_bullet = 1
-@export var damage_dealt_to_player = 1
+@export var speed = 25.0
+@export var health = 100.0
+@export var damage_received_from_bullet = 50.0
+@export var damage_dealt_to_player = 1.0
 
 @onready
 var player = get_tree().get_first_node_in_group("player")
 @onready
 var anim = %enemy_lvl_1_sprite
+@onready
+var healthbar = %enemy_lvl_1_health_bar
 
 func _ready():
+	healthbar.value = health
 	anim.play("run")
 
 func _physics_process(delta: float) -> void:
@@ -44,6 +47,7 @@ func deal_damage():
 func take_damage() -> void:
 	health -= damage_received_from_bullet
 	health = max(0, health)
+	healthbar.value = health
 	if health == 0:
 		queue_free()
 		anim.play("death")
