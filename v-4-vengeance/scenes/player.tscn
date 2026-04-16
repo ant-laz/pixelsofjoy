@@ -56,8 +56,10 @@ corner_detail = 1
 [sub_resource type="CircleShape2D" id="CircleShape2D_g2els"]
 radius = 6.0207973
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1968310530]
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1968310530 groups=["player"]]
 scale = Vector2(2, 2)
+collision_mask = 7
+safe_margin = 0.1
 script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=886823123]
@@ -91,4 +93,5 @@ collision_mask = 2
 
 [node name="HurtBox" type="CollisionShape2D" parent="Hitbox" unique_id=1237285393 groups=["player"]]
 position = Vector2(0, -0.5)
+scale = Vector2(1.3884463, 1.3884463)
 shape = SubResource("CircleShape2D_g2els")

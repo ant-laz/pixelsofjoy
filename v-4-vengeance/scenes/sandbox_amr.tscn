@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cd55xk6w4qcpb" path="res://assets/sprites/scifi_facility_tileset.png" id="3_h3cky"]
 [ext_resource type="PackedScene" uid="uid://pni25d668od3" path="res://scenes/joystick_canvas.tscn" id="3_nkd52"]
 [ext_resource type="PackedScene" uid="uid://b78d02404447s" path="res://scenes/pistol.tscn" id="4_o2qa2"]
-[ext_resource type="PackedScene" path="res://scenes/enemy_lvl_1.tscn" id="5_o2qa2"]
+[ext_resource type="PackedScene" uid="uid://dfpifnxk1r81f" path="res://scenes/enemy_lvl_1.tscn" id="5_o2qa2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nkd52"]
 size = Vector2(64, 64)

@@ -23,8 +23,7 @@ extends CharacterBody2D
 
 @export var speed = 25.0
 @export var health = 100.0
-@export var damage_received_from_bullet = 50.0
-@export var damage_dealt_to_player = 1.0
+@export var damage_dealt_to_player = 20.0
 
 @onready
 var player = get_tree().get_first_node_in_group("player")
@@ -37,8 +36,8 @@ func _ready():
 	healthbar.value = health
 
 func _physics_process(delta: float) -> void:
-	velocity = global_position.direction_to(player.global_position) * speed
-	move_and_slide()
+	velocity = global_position.direction_to(player.global_position).normalized() * speed
+	move_and_collide(velocity * delta)
 	
 func deal_damage():
 	return damage_dealt_to_player
@@ -48,8 +47,9 @@ func take_damage(damage) -> void:
 	health = max(0, health)
 	healthbar.value = health
 	if health == 0:
-		anim.play("death")
+		# anim.play("death")
 		emit_signal("enemy_died")
+		queue_free()
 
 func _on_enemy_lvl_1_sprite_animation_finished() -> void:
 	queue_free()

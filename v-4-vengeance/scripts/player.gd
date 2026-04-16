@@ -25,7 +25,7 @@ func _physics_process(delta: float) -> void:
 		direction = direction.normalized()
 
 	velocity = direction * speed
-	move_and_slide()
+	move_and_collide(velocity * delta)
 
 	if direction != Vector2.ZERO:
 		anim.play("walk")
