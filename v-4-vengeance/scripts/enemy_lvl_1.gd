@@ -35,7 +35,6 @@ var healthbar = %enemy_lvl_1_health_bar
 
 func _ready():
 	healthbar.value = health
-	anim.play("run")
 
 func _physics_process(delta: float) -> void:
 	velocity = global_position.direction_to(player.global_position) * speed
@@ -51,5 +50,6 @@ func take_damage(damage) -> void:
 	if health == 0:
 		anim.play("death")
 		emit_signal("enemy_died")
-		queue_free()
-	
+
+func _on_enemy_lvl_1_sprite_animation_finished() -> void:
+	queue_free()

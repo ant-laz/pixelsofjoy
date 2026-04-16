@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bnvyqtivn6el3" path="res://assets/sprites/tech_dungeon_roguelite_asset_pack_v7/Props and Items/props and items x3.png" id="2_er6ih"]
 [ext_resource type="Texture2D" uid="uid://gqh0txmxtxqq" path="res://assets/sprites/tech_dungeon_roguelite_asset_pack_v7/tileset x3.png" id="3_8lo3k"]
 [ext_resource type="PackedScene" uid="uid://dxx6gftood01p" path="res://scenes/player.tscn" id="4_er6ih"]
+[ext_resource type="PackedScene" uid="uid://b78d02404447s" path="res://scenes/pistol.tscn" id="5_2syum"]
 [ext_resource type="PackedScene" uid="uid://dfpifnxk1r81f" path="res://scenes/enemy_lvl_1.tscn" id="5_5ikfq"]
 [ext_resource type="PackedScene" uid="uid://pni25d668od3" path="res://scenes/joystick_canvas.tscn" id="5_qquau"]
 
@@ -689,8 +690,13 @@ tile_set = SubResource("TileSet_qquau")
 
 [node name="enemy_lvl_1" parent="." unique_id=1652752734 instance=ExtResource("5_5ikfq")]
 position = Vector2(244, 409)
+collision_layer = 2
 
 [node name="CharacterBody2D" parent="." unique_id=1968310530 groups=["player"] instance=ExtResource("4_er6ih")]
 position = Vector2(550, 361)
+
+[node name="Pistol" parent="CharacterBody2D" unique_id=1802066671 instance=ExtResource("5_2syum")]
+position = Vector2(-14.5, -11)
+scale = Vector2(0.5, 0.5)
 
 [node name="CanvasLayer" parent="." unique_id=1013650458 instance=ExtResource("5_qquau")]
