@@ -916,7 +916,6 @@ offset_top = 10.0
 offset_right = 71.5
 offset_bottom = 41.0
 grow_horizontal = 2
-theme_override_colors/font_color = Color(0.3254902, 1, 1, 1)
 theme_override_fonts/font = ExtResource("7_gee14")
 theme_override_font_sizes/font_size = 30
 text = "00:00"
@@ -932,6 +931,25 @@ grow_horizontal = 0
 theme_override_fonts/font = ExtResource("7_gee14")
 theme_override_font_sizes/font_size = 30
 text = "0"
+
+[node name="TimeExplanation" type="Label" parent="CanvasLayer" unique_id=1853586740]
+offset_left = 263.0
+offset_top = 10.0
+offset_right = 546.0
+offset_bottom = 41.0
+theme_override_fonts/font = ExtResource("7_gee14")
+theme_override_font_sizes/font_size = 30
+text = "Alive for: "
+
+[node name="MonsterCountExplanation" type="Label" parent="CanvasLayer" unique_id=85694669]
+offset_left = 816.0
+offset_top = 9.0
+offset_right = 1232.0
+offset_bottom = 74.0
+theme_override_fonts/font = ExtResource("7_gee14")
+theme_override_font_sizes/font_size = 30
+text = "Enemies killed: 
+"
 
 [node name="enemy_lvl_1" parent="." unique_id=1652752734 instance=ExtResource("6_p57ef")]
 position = Vector2(394, 1001)
