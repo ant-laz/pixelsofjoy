@@ -50,5 +50,6 @@ func take_damage(damage) -> void:
 	healthbar.value = health
 	if health == 0:
 		anim.play("death")
+		emit_signal("enemy_died")
 		queue_free()
 	
