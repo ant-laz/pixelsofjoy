@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bmyf808xjs0u4"]
+
+[ext_resource type="Script" uid="uid://d00wppv53fnjt" path="res://rocket.gd" id="1_dkv7l"]
+[ext_resource type="Texture2D" uid="uid://bhtkk6fu0q31f" path="res://assets/sprites/tech_dungeon_roguelite_asset_pack_v7/Projectiles/projectiles x3.png" id="2_agf72"]
+[ext_resource type="PackedScene" uid="uid://b6u7gkqosy3k8" path="res://scenes/explosion.tscn" id="2_y2y7n"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y2y7n"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8kmw3"]
+atlas = ExtResource("2_agf72")
+region = Rect2(13.703262, 693.1034, 68.10777, 53.358276)
+
+[node name="Rocket" type="Area2D" unique_id=29561939]
+collision_layer = 2048
+collision_mask = 6
+script = ExtResource("1_dkv7l")
+explosion_scene = ExtResource("2_y2y7n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=23734830]
+scale = Vector2(-1.4998397, 0.8076103)
+shape = SubResource("CircleShape2D_y2y7n")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1289758647]
+position = Vector2(0, -1)
+scale = Vector2(0.6136895, 0.6136895)
+texture = SubResource("AtlasTexture_8kmw3")

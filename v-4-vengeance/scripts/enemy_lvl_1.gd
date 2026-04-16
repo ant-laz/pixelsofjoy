@@ -42,7 +42,7 @@ func _physics_process(delta: float) -> void:
 func deal_damage():
 	return damage_dealt_to_player
 
-func take_damage(damage) -> void:
+func take_damage(damage: int) -> void:
 	health -= damage
 	health = max(0, health)
 	healthbar.value = health

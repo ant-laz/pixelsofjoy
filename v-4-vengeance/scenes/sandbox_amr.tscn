@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dasrigvukgdsb"]
 
 [ext_resource type="PackedScene" uid="uid://dxx6gftood01p" path="res://scenes/player.tscn" id="1_vguio"]
+[ext_resource type="PackedScene" uid="uid://d2672rvp7kbxo" path="res://scenes/rocket_launcher.tscn" id="3_fkh73"]
 [ext_resource type="Texture2D" uid="uid://cd55xk6w4qcpb" path="res://assets/sprites/scifi_facility_tileset.png" id="3_h3cky"]
 [ext_resource type="PackedScene" uid="uid://pni25d668od3" path="res://scenes/joystick_canvas.tscn" id="3_nkd52"]
 [ext_resource type="PackedScene" uid="uid://b78d02404447s" path="res://scenes/pistol.tscn" id="4_o2qa2"]
@@ -11,11 +12,12 @@ size = Vector2(64, 64)
 
 [node name="level_amr" type="Node2D" unique_id=2050603229]
 
-[node name="Player" parent="." unique_id=1968310530 groups=["player"] instance=ExtResource("1_vguio")]
-collision_mask = 7
+[node name="Player" parent="." unique_id=1968310530 instance=ExtResource("1_vguio")]
 
 [node name="Pistol" parent="Player" unique_id=432423521 instance=ExtResource("4_o2qa2")]
 scale = Vector2(0.5, 0.5)
+
+[node name="RocketLauncher" parent="Player" unique_id=894412999 instance=ExtResource("3_fkh73")]
 
 [node name="CanvasLayer" parent="." unique_id=1013650458 instance=ExtResource("3_nkd52")]
 
