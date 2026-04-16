@@ -73,7 +73,7 @@ shape = SubResource("CircleShape2D_o2qa2")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1115360853]
 scale = Vector2(0.5, 0.5)
-zoom = Vector2(4, 4)
+zoom = Vector2(2, 2)
 
 [node name="ProgressBar" type="ProgressBar" parent="." unique_id=2123217902]
 offset_left = -7.0
