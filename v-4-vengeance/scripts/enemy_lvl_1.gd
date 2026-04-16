@@ -37,6 +37,9 @@ func _ready():
 func _physics_process(delta: float) -> void:
 	velocity = global_position.direction_to(player.global_position) * speed
 	move_and_slide()
+	
+func deal_damage():
+	return damage_dealt_to_player
 
 func take_damage() -> void:
 	health -= damage_received_from_bullet
