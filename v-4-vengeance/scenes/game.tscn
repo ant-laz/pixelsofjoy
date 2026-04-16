@@ -727,3 +727,5 @@ text = "0"
 
 [node name="enemy_lvl_1" parent="." unique_id=1652752734 instance=ExtResource("6_p57ef")]
 position = Vector2(394, 1001)
+
+[connection signal="enemy_died" from="enemy_lvl_1" to="." method="_on_enemy_died"]
