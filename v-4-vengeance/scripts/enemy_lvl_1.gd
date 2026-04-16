@@ -15,6 +15,8 @@
 
 extends CharacterBody2D
 
+signal enemy_died
+
 # credit to these resources for enemy logic: 
 # https://kidscancode.org/godot_recipes/4.x/ai/chasing/index.html
 # https://dev.to/christinec_dev/lets-learn-godot-4-by-making-an-rpg-part-9-enemy-ai-setup-3nfl
