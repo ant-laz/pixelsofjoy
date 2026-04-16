@@ -4,13 +4,14 @@
 [ext_resource type="Texture2D" uid="uid://cd55xk6w4qcpb" path="res://assets/sprites/scifi_facility_tileset.png" id="3_h3cky"]
 [ext_resource type="PackedScene" uid="uid://pni25d668od3" path="res://scenes/joystick_canvas.tscn" id="3_nkd52"]
 [ext_resource type="PackedScene" uid="uid://b78d02404447s" path="res://scenes/pistol.tscn" id="4_o2qa2"]
+[ext_resource type="PackedScene" path="res://scenes/enemy_lvl_1.tscn" id="5_o2qa2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nkd52"]
 size = Vector2(64, 64)
 
 [node name="level_amr" type="Node2D" unique_id=2050603229]
 
-[node name="Player" parent="." unique_id=1968310530 instance=ExtResource("1_vguio")]
+[node name="Player" parent="." unique_id=1968310530 groups=["player"] instance=ExtResource("1_vguio")]
 collision_mask = 7
 
 [node name="Pistol" parent="Player" unique_id=432423521 instance=ExtResource("4_o2qa2")]
@@ -29,3 +30,7 @@ texture = ExtResource("3_h3cky")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1320590278]
 position = Vector2(0, -8)
 shape = SubResource("RectangleShape2D_nkd52")
+
+[node name="enemy_lvl_1" parent="." unique_id=1652752734 instance=ExtResource("5_o2qa2")]
+position = Vector2(155, -58)
+collision_layer = 2

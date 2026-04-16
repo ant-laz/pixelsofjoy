@@ -16,7 +16,7 @@ extends Area2D
 
 @export var projectile_scene: PackedScene
 @export var base_fire_rate := 1.0
-@export var base_damage := 1.0
+@export var base_damage := 10.0
 
 @onready var muzzle: Marker2D = $ShootingPoint
 @onready var fire_timer: Timer = $FireTimer

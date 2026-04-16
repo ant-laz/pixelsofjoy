@@ -53,6 +53,9 @@ radius = 4.0
 bg_color = Color(0.6278126, 0.9988658, 1.540184e-06, 1)
 corner_detail = 1
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_g2els"]
+radius = 6.0207973
+
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1968310530]
 scale = Vector2(2, 2)
 script = ExtResource("1_g2els")
@@ -81,3 +84,11 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_qhqgy")
 step = 1.0
 value = 55.0
 show_percentage = false
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=858527657]
+collision_layer = 0
+collision_mask = 2
+
+[node name="HurtBox" type="CollisionShape2D" parent="Hitbox" unique_id=1237285393]
+position = Vector2(0, -0.5)
+shape = SubResource("CircleShape2D_g2els")

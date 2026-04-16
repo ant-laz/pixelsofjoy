@@ -9,7 +9,7 @@ radius = 161.00311
 
 [node name="Pistol" type="Area2D" unique_id=1802066671]
 collision_layer = 256
-collision_mask = 6
+collision_mask = 2
 script = ExtResource("1_buff3")
 projectile_scene = ExtResource("2_1e3ry")
 
