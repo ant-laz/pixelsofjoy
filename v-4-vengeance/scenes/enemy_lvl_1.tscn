@@ -170,6 +170,7 @@ corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
 [node name="enemy_lvl_1" type="CharacterBody2D" unique_id=1652752734 groups=["enemies"]]
+collision_layer = 2
 collision_mask = 7
 script = ExtResource("1_huous")
 
@@ -182,6 +183,7 @@ autoplay = "run"
 [node name="enemy_lvl_1_collision_shape" type="CollisionShape2D" parent="." unique_id=626040008]
 position = Vector2(0, -3)
 shape = SubResource("CircleShape2D_huous")
+debug_color = Color(0.73942167, 0, 0.026886415, 0.41960785)
 
 [node name="enemy_lvl_1_health_bar" type="ProgressBar" parent="." unique_id=1868225957]
 unique_name_in_owner = true

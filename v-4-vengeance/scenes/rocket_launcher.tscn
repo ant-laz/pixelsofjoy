@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://d2672rvp7kbxo"]
+
+[ext_resource type="Script" uid="uid://e8mmeaiow30i" path="res://rocket_launcher.gd" id="1_vlcf2"]
+[ext_resource type="PackedScene" uid="uid://bmyf808xjs0u4" path="res://scenes/rocket.tscn" id="2_snwwu"]
+[ext_resource type="Texture2D" uid="uid://bqds24e0w7wen" path="res://assets/sprites/rocket _launcher.png" id="2_w7upe"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_snwwu"]
+radius = 161.00311
+
+[node name="RocketLauncher" type="Area2D" unique_id=894412999]
+scale = Vector2(0.8228955, 0.8228955)
+collision_layer = 1024
+collision_mask = 2
+script = ExtResource("1_vlcf2")
+projectile_scene = ExtResource("2_snwwu")
+
+[node name="ShootingPoint" type="Marker2D" parent="." unique_id=216927611]
+position = Vector2(24.158907, -7.5064893)
+
+[node name="WeaponPivot" type="Marker2D" parent="." unique_id=2053819254]
+
+[node name="FireTimer" type="Timer" parent="." unique_id=990147011]
+wait_time = 2.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=373683679]
+shape = SubResource("CircleShape2D_snwwu")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=901615399]
+position = Vector2(14.582651, -6.076105)
+scale = Vector2(0.50999665, 0.50999665)
+texture = ExtResource("2_w7upe")
