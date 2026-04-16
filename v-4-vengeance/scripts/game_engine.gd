@@ -1,6 +1,8 @@
 extends Node2D
 
 @onready var TimerLabel = $CanvasLayer/TimerLabel
+@onready var MonsterLabel = $CanvasLayer/MonsterCountLabel
+var monster_count = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -19,6 +21,14 @@ func _process(delta: float) -> void:
 	TimerLabel.text = "%02d:%02d:%01d" % [minutes, seconds, msec]
 	#TimerLabel.text = time_string
 
+func _input(event):
+	# This is just a place holder for the monster counter
+	if event.is_action_pressed("ui_accept"):
+		monster_count += 1
+		update_monster_display()
+		
+func update_monster_display():
+	MonsterLabel.text = str(monster_count)
 
 func _on_timer_timeout() -> void:
 	get_tree().change_scene_to_file("res://scenes/game_over.tscn")
