@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://b2ee7u4ck6s7r"]
+
+[ext_resource type="Texture2D" uid="uid://bhtkk6fu0q31f" path="res://assets/sprites/tech_dungeon_roguelite_asset_pack_v7/Projectiles/projectiles x3.png" id="1_acmqr"]
+[ext_resource type="Script" uid="uid://b8klnrfqescht" path="res://scripts/smoke.gd" id="1_rx0m8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rx0m8"]
+atlas = ExtResource("1_acmqr")
+region = Rect2(0, 768, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y4cvb"]
+atlas = ExtResource("1_acmqr")
+region = Rect2(96, 768, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_by7rd"]
+atlas = ExtResource("1_acmqr")
+region = Rect2(192, 768, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rms5f"]
+atlas = ExtResource("1_acmqr")
+region = Rect2(288, 768, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n3n76"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rx0m8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y4cvb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_by7rd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rms5f")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Area2D" type="Area2D" unique_id=225496804]
+collision_layer = 0
+collision_mask = 0
+monitoring = false
+monitorable = false
+script = ExtResource("1_rx0m8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=6902669]
+position = Vector2(-2, -23)
+sprite_frames = SubResource("SpriteFrames_n3n76")
+frame = 3
+frame_progress = 1.0

@@ -91,6 +91,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_pw7mt"]
 
 [node name="Explosion" type="Area2D" unique_id=839382492]
+scale = Vector2(2.4993117, 2.4993117)
 collision_layer = 4096
 collision_mask = 2
 script = ExtResource("1_nfeox")

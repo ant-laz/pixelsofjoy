@@ -17,6 +17,7 @@ extends CharacterBody2D
 
 signal enemy_died
 
+@export var smoke_scene: PackedScene
 @export var speed = 25.0
 @export var health = 100.0
 @export var damage_dealt_to_player = 20.0
@@ -45,6 +46,9 @@ func take_damage(damage: int) -> void:
 	if health == 0:
 		# anim.play("death")
 		emit_signal("enemy_died")
+		var smoke = smoke_scene.instantiate()
+		smoke.global_position = global_position
+		get_tree().current_scene.add_child(smoke)
 		queue_free()
 
 func _on_enemy_lvl_1_sprite_animation_finished() -> void:

@@ -11,6 +11,7 @@ atlas = ExtResource("2_agf72")
 region = Rect2(13.703262, 693.1034, 68.10777, 53.358276)
 
 [node name="Rocket" type="Area2D" unique_id=29561939]
+scale = Vector2(2.0478508, 2.0478508)
 collision_layer = 2048
 collision_mask = 6
 script = ExtResource("1_dkv7l")

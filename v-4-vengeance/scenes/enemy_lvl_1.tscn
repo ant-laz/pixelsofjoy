@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://37du1kqgxe7f" path="res://scripts/enemy_lvl_1.gd" id="1_huous"]
 [ext_resource type="Texture2D" uid="uid://dd82qnvlivr4p" path="res://assets/sprites/tech_dungeon_roguelite_asset_pack_v7/Enemies/enemies x2.png" id="2_huous"]
+[ext_resource type="PackedScene" uid="uid://b2ee7u4ck6s7r" path="res://scenes/smoke.tscn" id="2_xaxbr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xaxbr"]
 atlas = ExtResource("2_huous")
@@ -60,6 +61,7 @@ corner_radius_bottom_left = 8
 collision_layer = 2
 collision_mask = 7
 script = ExtResource("1_huous")
+smoke_scene = ExtResource("2_xaxbr")
 
 [node name="enemy_lvl_1_sprite" type="AnimatedSprite2D" parent="." unique_id=1177093166]
 unique_name_in_owner = true

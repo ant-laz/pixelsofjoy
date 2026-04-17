@@ -82,7 +82,7 @@ bg_color = Color(0.6278126, 0.9988658, 1.540184e-06, 1)
 corner_detail = 1
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g2els"]
-radius = 6.0207973
+radius = 8.710014
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1968310530 groups=["player"]]
 scale = Vector2(2, 2)
@@ -96,13 +96,12 @@ animation = &"idle"
 frame_progress = 0.8000252
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2097804039]
-position = Vector2(0, -0.5)
-scale = Vector2(1.4063948, 1.4078026)
+position = Vector2(0, 14.000001)
+scale = Vector2(2.9596708, 2.9626334)
 shape = SubResource("CircleShape2D_o2qa2")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1115360853]
 scale = Vector2(0.5, 0.5)
-zoom = Vector2(2, 2)
 
 [node name="ProgressBar" type="ProgressBar" parent="." unique_id=2123217902]
 offset_left = -7.0
@@ -117,10 +116,11 @@ value = 55.0
 show_percentage = false
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=858527657]
+position = Vector2(1.5, 0)
 collision_layer = 0
 collision_mask = 2
 
 [node name="HurtBox" type="CollisionShape2D" parent="Hitbox" unique_id=1237285393 groups=["player"]]
-position = Vector2(0, -0.5)
-scale = Vector2(1.3884463, 1.3884463)
+position = Vector2(-2, 14)
+scale = Vector2(1.4697884, 1.4697884)
 shape = SubResource("CircleShape2D_g2els")
