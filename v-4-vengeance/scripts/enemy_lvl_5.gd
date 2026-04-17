@@ -17,16 +17,16 @@ extends CharacterBody2D
 
 signal enemy_died
 
-@export var speed = 25.0
+@export var speed = 50.0
 @export var health = 100.0
-@export var damage_dealt_to_player = 20.0
+@export var damage_dealt_to_player = 60.0
 
 @onready
 var player = get_tree().get_first_node_in_group("player")
 @onready
-var anim = %enemy_lvl_1_sprite
+var anim = %enemy_lvl_5_sprite
 @onready
-var healthbar = %enemy_lvl_1_health_bar
+var healthbar = %enemy_lvl_5_health_bar
 
 func _ready():
 	healthbar.value = health
@@ -46,6 +46,3 @@ func take_damage(damage: int) -> void:
 		# anim.play("death")
 		emit_signal("enemy_died")
 		queue_free()
-
-func _on_enemy_lvl_1_sprite_animation_finished() -> void:
-	queue_free()

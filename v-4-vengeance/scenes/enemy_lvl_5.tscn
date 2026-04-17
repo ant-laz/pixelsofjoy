@@ -1,0 +1,112 @@
+[gd_scene format=3 uid="uid://b33p2qd7pvlqj"]
+
+[ext_resource type="Script" uid="uid://uu46v5gkm3nh" path="res://scripts/enemy_lvl_5.gd" id="1_k2i0q"]
+[ext_resource type="Texture2D" uid="uid://b4bnc6o7upgy5" path="res://assets/sprites/tech_dungeon_roguelite_asset_pack_v7/Boss/boss x2.png" id="1_yfh4b"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k2i0q"]
+atlas = ExtResource("1_yfh4b")
+region = Rect2(0, 256, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yt0h3"]
+atlas = ExtResource("1_yfh4b")
+region = Rect2(128, 256, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ahqym"]
+atlas = ExtResource("1_yfh4b")
+region = Rect2(256, 256, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kt0t4"]
+atlas = ExtResource("1_yfh4b")
+region = Rect2(384, 256, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l6o27"]
+atlas = ExtResource("1_yfh4b")
+region = Rect2(512, 256, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u5hmn"]
+atlas = ExtResource("1_yfh4b")
+region = Rect2(640, 256, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eywsk"]
+atlas = ExtResource("1_yfh4b")
+region = Rect2(768, 256, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4v1o4"]
+atlas = ExtResource("1_yfh4b")
+region = Rect2(896, 256, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2hi7t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k2i0q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yt0h3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ahqym")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kt0t4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l6o27")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u5hmn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eywsk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4v1o4")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_krp58"]
+radius = 43.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yfh4b"]
+bg_color = Color(0.5358906, 0.53965294, 0.542866, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k2i0q"]
+bg_color = Color(0, 0.45676988, 0.8818692, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="enemy_lvl_5" type="CharacterBody2D" unique_id=1151889234 groups=["enemies"]]
+script = ExtResource("1_k2i0q")
+
+[node name="enemy_lvl_5_sprite" type="AnimatedSprite2D" parent="." unique_id=579486998]
+unique_name_in_owner = true
+sprite_frames = SubResource("SpriteFrames_2hi7t")
+animation = &"run"
+autoplay = "run"
+frame = 7
+frame_progress = 0.33229163
+
+[node name="enemy_lvl_5_collision_shape" type="CollisionShape2D" parent="." unique_id=1928062083]
+position = Vector2(6, 20)
+shape = SubResource("CircleShape2D_krp58")
+debug_color = Color(0.73942167, 0, 0.026886415, 0.41960785)
+
+[node name="enemy_lvl_5_health_bar" type="ProgressBar" parent="." unique_id=1416327032]
+unique_name_in_owner = true
+offset_left = -23.0
+offset_top = -62.0
+offset_right = 22.0
+offset_bottom = -52.0
+theme_override_styles/background = SubResource("StyleBoxFlat_yfh4b")
+theme_override_styles/fill = SubResource("StyleBoxFlat_k2i0q")
+value = 50.0
+show_percentage = false

@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://buiqoq6auqyjg"]
+
+[ext_resource type="Script" uid="uid://b7gonfgcm0e83" path="res://scripts/enemy_lvl_3.gd" id="1_bof23"]
+[ext_resource type="Texture2D" uid="uid://dd82qnvlivr4p" path="res://assets/sprites/tech_dungeon_roguelite_asset_pack_v7/Enemies/enemies x2.png" id="1_jhyj7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bof23"]
+atlas = ExtResource("1_jhyj7")
+region = Rect2(0, 832, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cqmfk"]
+atlas = ExtResource("1_jhyj7")
+region = Rect2(64, 832, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hj41f"]
+atlas = ExtResource("1_jhyj7")
+region = Rect2(128, 832, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p41yd"]
+atlas = ExtResource("1_jhyj7")
+region = Rect2(192, 832, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_56sba"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bof23")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cqmfk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hj41f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p41yd")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oxgxi"]
+radius = 16.03122
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jhyj7"]
+bg_color = Color(0.5358906, 0.53965294, 0.542866, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bof23"]
+bg_color = Color(0, 0.45676988, 0.8818692, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="enemy_lvl_3" type="CharacterBody2D" unique_id=1981492919 groups=["enemies"]]
+script = ExtResource("1_bof23")
+
+[node name="enemy_lvl_3_sprite" type="AnimatedSprite2D" parent="." unique_id=1015703943]
+unique_name_in_owner = true
+sprite_frames = SubResource("SpriteFrames_56sba")
+animation = &"run"
+autoplay = "run"
+
+[node name="enemy_lvl_3_collision_shape" type="CollisionShape2D" parent="." unique_id=979472868]
+position = Vector2(0, -3)
+shape = SubResource("CircleShape2D_oxgxi")
+debug_color = Color(0.73942167, 0, 0.026886415, 0.41960785)
+
+[node name="enemy_lvl_3_health_bar" type="ProgressBar" parent="." unique_id=937315697]
+unique_name_in_owner = true
+offset_left = -23.0
+offset_top = -62.0
+offset_right = 22.0
+offset_bottom = -52.0
+theme_override_styles/background = SubResource("StyleBoxFlat_jhyj7")
+theme_override_styles/fill = SubResource("StyleBoxFlat_bof23")
+value = 50.0
+show_percentage = false
