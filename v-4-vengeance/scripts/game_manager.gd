@@ -44,7 +44,7 @@ func update_stop_watch(time_elapsed):
 	TimerLabel.text = "%02d:%02d:%01d" % [minutes, seconds, msec]
 	
 func update_monster_display():
-	MonsterLabel.text = str(monster_count)
+	MonsterLabel.text = "Enemies killed: " + str(monster_count)
 	
 func trigger_spawn_wave():
 	intensity += 0.5
