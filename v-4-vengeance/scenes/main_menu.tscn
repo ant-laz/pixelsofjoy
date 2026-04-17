@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://ca76uj50ruovn"]
 
 [ext_resource type="Script" uid="uid://bb22w0e2mjm7t" path="res://scripts/main_menu.gd" id="1_ekxnf"]
-[ext_resource type="Texture2D" uid="uid://76upjae5nn5g" path="res://assets/sprites/home_screen_background.png" id="1_l6cm7"]
+[ext_resource type="Texture2D" uid="uid://cinxki2fxq05o" path="res://assets/sprites/v4v splash.png" id="2_bqqt6"]
+[ext_resource type="FontFile" uid="uid://b344rxcq81ac" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="3_wu84c"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ekxnf"]
-texture = ExtResource("1_l6cm7")
+texture = ExtResource("2_bqqt6")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vue75"]
 bg_color = Color(1, 1, 1, 1)
@@ -78,6 +79,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_wu84c")
 theme_override_font_sizes/font_size = 31
 theme_override_styles/normal = SubResource("StyleBoxFlat_vue75")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_l6cm7")
