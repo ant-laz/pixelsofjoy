@@ -4,16 +4,15 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bqds24e0w7wen"
 path.s3tc="res://.godot/imported/rocket _launcher.png-09e94edcb1b9cf9e71107b747970bdb9.s3tc.ctex"
-path.etc2="res://.godot/imported/rocket _launcher.png-09e94edcb1b9cf9e71107b747970bdb9.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/sprites/rocket _launcher.png"
-dest_files=["res://.godot/imported/rocket _launcher.png-09e94edcb1b9cf9e71107b747970bdb9.s3tc.ctex", "res://.godot/imported/rocket _launcher.png-09e94edcb1b9cf9e71107b747970bdb9.etc2.ctex"]
+dest_files=["res://.godot/imported/rocket _launcher.png-09e94edcb1b9cf9e71107b747970bdb9.s3tc.ctex"]
 
 [params]
 

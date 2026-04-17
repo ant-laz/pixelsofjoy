@@ -20,6 +20,7 @@ signal enemy_died
 @export var speed = 50.0
 @export var health = 100.0
 @export var damage_dealt_to_player = 60.0
+var is_dead: bool = false
 
 @onready
 var player = get_tree().get_first_node_in_group("player")
@@ -39,10 +40,13 @@ func deal_damage():
 	return damage_dealt_to_player
 
 func take_damage(damage: int) -> void:
+	if is_dead:
+		return
 	health -= damage
 	health = max(0, health)
 	healthbar.value = health
 	if health == 0:
 		# anim.play("death")
+		is_dead = true
 		emit_signal("enemy_died")
 		queue_free()
