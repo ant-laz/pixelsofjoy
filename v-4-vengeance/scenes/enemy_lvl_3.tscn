@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://buiqoq6auqyjg"]
+[gd_scene format=3 uid="uid://csrj8asuw5v2c"]
 
 [ext_resource type="Script" uid="uid://b7gonfgcm0e83" path="res://scripts/enemy_lvl_3.gd" id="1_bof23"]
 [ext_resource type="Texture2D" uid="uid://dd82qnvlivr4p" path="res://assets/sprites/tech_dungeon_roguelite_asset_pack_v7/Enemies/enemies x2.png" id="1_jhyj7"]
@@ -80,3 +80,5 @@ theme_override_styles/background = SubResource("StyleBoxFlat_jhyj7")
 theme_override_styles/fill = SubResource("StyleBoxFlat_bof23")
 value = 50.0
 show_percentage = false
+
+[connection signal="enemy_died" from="." to="." method="_on_enemy_died"]

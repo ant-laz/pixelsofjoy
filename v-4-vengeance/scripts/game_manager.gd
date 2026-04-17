@@ -4,24 +4,37 @@ extends Node2D
 
 @export var pistol_scene: PackedScene
 @export var rocket_launcher_scene: PackedScene
+@export var enemy_roster: Array[PackedScene]
 
 @onready var TimerLabel = $CanvasLayer/TimerLabel
 @onready var MonsterLabel = $CanvasLayer/MonsterCountLabel
 @onready var Player = $Player
 @onready var WeaponHolder = $Player/WeaponHolder
 
+# === Difficulty variables
+var intensity = 1.0
+var wave_size = 3
+var max_enemy_lvl = 0
+
 var time_elapsed: float = 0.0
+var time_since_last_spawn = 0.0
+var spawn_interval = 5.0 # Spawn a wave every 10 seconds
 var is_stopped: bool = false 
 var monster_count = 0
+var fire_rate_level = 1  # Todo
 
 func _process(delta):
-	# If we are stopped, we 'return' (skip the rest of the code)
 	if is_stopped:
 		return
 	
-	# Add the frame time to our total
 	time_elapsed += delta
+	time_since_last_spawn += delta
+	
 	update_stop_watch(time_elapsed)
+	
+	if time_since_last_spawn >= spawn_interval:
+		trigger_spawn_wave()
+		time_since_last_spawn = 0.0
 	
 	
 func update_stop_watch(time_elapsed):
@@ -29,6 +42,35 @@ func update_stop_watch(time_elapsed):
 	var seconds = int(fmod(time_elapsed, 60))
 	var msec = int(fmod(time_elapsed, 1) * 10)
 	TimerLabel.text = "%02d:%02d:%01d" % [minutes, seconds, msec]
+	
+func update_monster_display():
+	MonsterLabel.text = str(monster_count)
+	
+func trigger_spawn_wave():
+	intensity += 0.5
+	
+	# Calculate wave size and monster tier based on stopwatch_time
+	var count = int(wave_size * intensity)
+	max_enemy_lvl = clampi(int(time_elapsed / 20.0), 0, 4)
+	
+	# Call the spawn_wave function we wrote earlier
+	spawn_wave(count, max_enemy_lvl)
+	
+	# Optional: Make the game faster over time!
+	# Every wave, make the next one come 0.1s sooner (minimum 2s)
+	spawn_interval = max(2.0, spawn_interval - 0.1)
+	
+func spawn_wave(count, current_max_enemy_lvl):
+	for i in range(count):
+		# Pick a random enemy from the tiers currently unlocked
+		var random_index = randi_range(0, current_max_enemy_lvl)
+		var enemy = enemy_roster[random_index].instantiate()
+		
+		# Pick one of your 3 spawn points
+		var spawn_pos = $SpawnPoints.get_children().pick_random().global_position
+		enemy.global_position = spawn_pos
+				
+		add_child(enemy)
 
 
 func _on_player_died() -> void:
@@ -41,10 +83,7 @@ func _on_enemy_died() -> void:
 	monster_count += 1
 	upgrade_weapon()
 	update_monster_display()
-		
-func update_monster_display():
-	MonsterLabel.text = str(monster_count)
-	
+
 func upgrade_weapon():
 	if monster_count == 1:
 		switch_weapon(rocket_launcher_scene)
