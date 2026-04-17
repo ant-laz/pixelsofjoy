@@ -59,7 +59,7 @@ corner_radius_bottom_left = 8
 
 [node name="enemy_lvl_1" type="CharacterBody2D" unique_id=1652752734 groups=["enemies"]]
 collision_layer = 2
-collision_mask = 7
+collision_mask = 5
 script = ExtResource("1_huous")
 smoke_scene = ExtResource("2_xaxbr")
 
