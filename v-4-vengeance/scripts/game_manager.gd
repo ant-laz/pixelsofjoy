@@ -2,8 +2,13 @@ extends Node2D
 
 # Esraa's work, the game manager for the main level
 
+@export var pistol_scene: PackedScene
+@export var rocket_launcher_scene: PackedScene
+
 @onready var TimerLabel = $CanvasLayer/TimerLabel
 @onready var MonsterLabel = $CanvasLayer/MonsterCountLabel
+@onready var Player = $Player
+@onready var WeaponHolder = $Player/WeaponHolder
 
 var time_elapsed: float = 0.0
 var is_stopped: bool = false 
@@ -34,7 +39,25 @@ func _on_player_died() -> void:
 
 func _on_enemy_died() -> void:
 	monster_count += 1
+	upgrade_weapon()
 	update_monster_display()
 		
 func update_monster_display():
 	MonsterLabel.text = str(monster_count)
+	
+func upgrade_weapon():
+	if monster_count == 1:
+		switch_weapon(rocket_launcher_scene)
+	elif monster_count % 5 == 0 && monster_count > 0:
+		for child in WeaponHolder.get_children():
+			if child.has_method("upgrade_fire_rate"):
+				child.upgrade_fire_rate(0.1)
+
+func switch_weapon(scene: PackedScene):
+	# remove old weapon
+	for child in WeaponHolder.get_children():
+		child.queue_free()
+
+	# add new weapon
+	var weapon = scene.instantiate()
+	WeaponHolder.add_child(weapon)

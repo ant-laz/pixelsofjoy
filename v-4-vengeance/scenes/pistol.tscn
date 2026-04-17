@@ -28,5 +28,3 @@ position = Vector2(65.98825, -21)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1958848439]
 scale = Vector2(1.6613637, 1.6613637)
 shape = SubResource("CircleShape2D_buff3")
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1295509010]
