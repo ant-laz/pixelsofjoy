@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://b33p2qd7pvlqj"]
+[gd_scene format=3 uid="uid://gbbbd3mj0rw2"]
 
 [ext_resource type="Script" uid="uid://uu46v5gkm3nh" path="res://scripts/enemy_lvl_5.gd" id="1_k2i0q"]
 [ext_resource type="Texture2D" uid="uid://b4bnc6o7upgy5" path="res://assets/sprites/tech_dungeon_roguelite_asset_pack_v7/Boss/boss x2.png" id="1_yfh4b"]
@@ -110,3 +110,5 @@ theme_override_styles/background = SubResource("StyleBoxFlat_yfh4b")
 theme_override_styles/fill = SubResource("StyleBoxFlat_k2i0q")
 value = 50.0
 show_percentage = false
+
+[connection signal="enemy_died" from="." to="." method="_on_enemy_died"]
