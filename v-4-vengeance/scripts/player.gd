@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 signal died
 
-@export var speed := 200.0
+@export var speed := 300.0
 @export var damage_interval := 0.5
 
 @onready var joystick = $"../CanvasLayer/Virtual Joystick"
@@ -25,7 +25,7 @@ func _physics_process(delta: float) -> void:
 		direction = direction.normalized()
 
 	velocity = direction * speed
-	move_and_collide(velocity * delta)
+	move_and_slide()
 
 	if direction != Vector2.ZERO:
 		anim.play("walk")

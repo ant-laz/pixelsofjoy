@@ -28,6 +28,7 @@ func _ready():
 
 func set_direction(dir: Vector2):
 	direction = dir.normalized()
+	rotation = direction.angle()
 
 func _physics_process(delta):
 	global_position += direction * speed * delta
