@@ -69,12 +69,14 @@ func spawn_wave(count, current_max_enemy_lvl):
 		# Pick one of your 3 spawn points
 		var spawn_pos = $SpawnPoints.get_children().pick_random().global_position
 		enemy.global_position = spawn_pos
+		enemy.enemy_died.connect(_on_enemy_died)
 				
 		add_child(enemy)
 
 
 func _on_player_died() -> void:
 	is_stopped = true 
+	$game_over.visible = true
 	# Here we should show the game over screen.
 	print("Player is down! Stopwatch paused.") 
 
@@ -100,3 +102,7 @@ func switch_weapon(scene: PackedScene):
 	# add new weapon
 	var weapon = scene.instantiate()
 	WeaponHolder.add_child(weapon)
+
+
+func _on_give_up_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")

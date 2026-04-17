@@ -961,9 +961,6 @@ theme_override_font_sizes/font_size = 30
 text = "Enemies killed: 
 "
 
-[node name="enemy_lvl_1" parent="." unique_id=307571401 instance=ExtResource("6_p57ef")]
-position = Vector2(266, 874)
-
 [node name="game_over" type="CanvasLayer" parent="." unique_id=821481318]
 visible = false
 
@@ -1032,6 +1029,7 @@ position = Vector2(1538, 112)
 [node name="SpawnPoint1" type="Marker2D" parent="SpawnPoints" unique_id=1654313177]
 position = Vector2(193, 124)
 
-[connection signal="enemy_died" from="enemy_lvl_1" to="." method="_on_enemy_died"]
+[connection signal="died" from="Player" to="." method="_on_player_died"]
+[connection signal="pressed" from="game_over/VBoxContainer/button_give_up" to="." method="_on_give_up_pressed"]
 
 [editable path="Player"]

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cyqmur6avc6yy" path="res://scripts/pistol.gd" id="1_buff3"]
 [ext_resource type="Texture2D" uid="uid://cdxi2dbpran3w" path="res://assets/sprites/pistol.png" id="1_igbvm"]
-[ext_resource type="PackedScene" uid="uid://d1edwipuqg4ej" path="res://scenes/bullet.tscn" id="2_1e3ry"]
+[ext_resource type="PackedScene" path="res://scenes/bullet.tscn" id="2_1e3ry"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_buff3"]
 radius = 161.00311

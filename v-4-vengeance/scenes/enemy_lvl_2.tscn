@@ -84,5 +84,3 @@ theme_override_styles/background = SubResource("StyleBoxFlat_ahs27")
 theme_override_styles/fill = SubResource("StyleBoxFlat_3jbi6")
 value = 50.0
 show_percentage = false
-
-[connection signal="enemy_died" from="." to="." method="_on_enemy_died"]
