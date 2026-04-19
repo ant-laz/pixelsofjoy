@@ -1021,5 +1021,6 @@ position = Vector2(193, 124)
 
 [connection signal="died" from="Player" to="." method="_on_player_died"]
 [connection signal="pressed" from="game_over/VBoxContainer/button_give_up" to="." method="_on_give_up_pressed"]
+[connection signal="pressed" from="game_over/VBoxContainer/button_revive_with_ad" to="." method="_on_button_revive_with_ad_pressed"]
 
 [editable path="Player"]

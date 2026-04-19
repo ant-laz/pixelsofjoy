@@ -106,3 +106,18 @@ func switch_weapon(scene: PackedScene):
 
 func _on_give_up_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+
+func _ready() -> void:
+	# load an ad in the background as soon as the game starts
+	AdManager._on_load_pressed()
+	AdManager.reward_granted.connect(_on_reward_granted)
+
+func _on_button_revive_with_ad_pressed() -> void:
+	# if users selects revive with ad, then show the pre-loaded ad
+	AdManager._on_show_pressed()
+
+func _on_reward_granted() -> void:
+	# user watched the ad and now gets their reward
+	Player.health = 100
+	$game_over.visible = false
+	

@@ -1,5 +1,7 @@
 extends Node
 
+signal reward_granted
+
 var _rewarded_ad : RewardedAd
 var _full_screen_content_callback := FullScreenContentCallback.new()
 var on_user_earned_reward_listener := OnUserEarnedRewardListener.new()
@@ -19,7 +21,7 @@ func _ready() -> void:
 		print("on_ad_showed_full_screen_content")
 	on_user_earned_reward_listener.on_user_earned_reward = func(rewarded_item : RewardedItem):
 		print("on_user_earned_reward, rewarded_item: rewarded", rewarded_item.amount, rewarded_item.type)
-		# emit signal ?
+		emit_signal("reward_granted")
 
 
 func _on_load_pressed():
