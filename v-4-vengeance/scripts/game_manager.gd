@@ -6,8 +6,8 @@ extends Node2D
 @export var rocket_launcher_scene: PackedScene
 @export var enemy_roster: Array[PackedScene]
 
-@onready var TimerLabel = $CanvasLayer/TimerLabel
-@onready var MonsterLabel = $CanvasLayer/MonsterCountLabel
+@onready var TimerLabel = $CanvasLayer/TimerMarginContainer/TimerLabel
+@onready var MonsterLabel = $CanvasLayer/MonsterCountMarginContainer/MonsterCountLabel
 @onready var Player = $Player
 @onready var WeaponHolder = $Player/WeaponHolder
 
@@ -41,7 +41,7 @@ func update_stop_watch(time_elapsed):
 	var minutes = int(time_elapsed / 60)
 	var seconds = int(fmod(time_elapsed, 60))
 	var msec = int(fmod(time_elapsed, 1) * 10)
-	TimerLabel.text = "%02d:%02d:%01d" % [minutes, seconds, msec]
+	TimerLabel.text = "Alive for: %02d:%02d:%01d" % [minutes, seconds, msec]
 	
 func update_monster_display():
 	MonsterLabel.text = "Enemies killed: " + str(monster_count)

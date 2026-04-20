@@ -917,39 +917,33 @@ scale = Vector2(0.5, 0.5)
 
 [node name="CanvasLayer" parent="." unique_id=1013650458 instance=ExtResource("5_iywne")]
 
-[node name="TimerLabel" type="Label" parent="CanvasLayer" unique_id=159843167]
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -71.5
-offset_top = 10.0
-offset_right = 71.5
-offset_bottom = 41.0
-grow_horizontal = 2
+[node name="TimerMarginContainer" type="MarginContainer" parent="CanvasLayer" unique_id=1155399085]
+offset_right = 432.0
+offset_bottom = 51.0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+
+[node name="TimerLabel" type="Label" parent="CanvasLayer/TimerMarginContainer" unique_id=159843167]
+layout_mode = 2
 theme_override_fonts/font = ExtResource("7_gee14")
 theme_override_font_sizes/font_size = 30
-text = "00:00"
+text = "Alive for:  00:00"
 
-[node name="MonsterCountLabel" type="Label" parent="CanvasLayer" unique_id=1337581113]
+[node name="MonsterCountMarginContainer" type="MarginContainer" parent="CanvasLayer" unique_id=1634564112]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -40.0
-offset_top = 10.0
-offset_bottom = 41.0
+offset_left = -446.0
+offset_bottom = 40.0
 grow_horizontal = 0
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+
+[node name="MonsterCountLabel" type="Label" parent="CanvasLayer/MonsterCountMarginContainer" unique_id=1337581113]
+layout_mode = 2
 theme_override_fonts/font = ExtResource("7_gee14")
 theme_override_font_sizes/font_size = 30
 text = "Enemies killed: 0"
-
-[node name="TimeExplanation" type="Label" parent="CanvasLayer" unique_id=1853586740]
-offset_left = 263.0
-offset_top = 10.0
-offset_right = 546.0
-offset_bottom = 41.0
-theme_override_fonts/font = ExtResource("7_gee14")
-theme_override_font_sizes/font_size = 30
-text = "Alive for: "
 
 [node name="game_over" type="CanvasLayer" parent="." unique_id=821481318]
 visible = false
