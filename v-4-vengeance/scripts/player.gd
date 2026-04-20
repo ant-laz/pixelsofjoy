@@ -54,4 +54,3 @@ func take_damage(amount: int):
 	
 	if health <= 0:
 		died.emit() 
-		set_physics_process(false)
