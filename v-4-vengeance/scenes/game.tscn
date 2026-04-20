@@ -946,6 +946,7 @@ theme_override_font_sizes/font_size = 30
 text = "Enemies killed: 0"
 
 [node name="game_over" type="CanvasLayer" parent="." unique_id=821481318]
+unique_name_in_owner = true
 visible = false
 
 [node name="game_over_background" type="Panel" parent="game_over" unique_id=876598371]
