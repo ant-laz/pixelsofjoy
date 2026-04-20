@@ -920,8 +920,8 @@ scale = Vector2(0.5, 0.5)
 [node name="TimerMarginContainer" type="MarginContainer" parent="CanvasLayer" unique_id=1155399085]
 offset_right = 432.0
 offset_bottom = 51.0
-theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 20
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 100
 
 [node name="TimerLabel" type="Label" parent="CanvasLayer/TimerMarginContainer" unique_id=159843167]
 layout_mode = 2
@@ -936,8 +936,8 @@ anchor_right = 1.0
 offset_left = -446.0
 offset_bottom = 40.0
 grow_horizontal = 0
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 20
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 100
 
 [node name="MonsterCountLabel" type="Label" parent="CanvasLayer/MonsterCountMarginContainer" unique_id=1337581113]
 layout_mode = 2

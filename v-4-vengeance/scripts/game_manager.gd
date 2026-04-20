@@ -118,7 +118,9 @@ func _on_button_revive_with_ad_pressed() -> void:
 
 func _on_reward_granted() -> void:
 	# user watched the ad and now gets their reward
+	print("_on_reward_granted called")
 	Player.health = 100
+	is_stopped = false
 	get_tree().paused = false
 	$game_over.visible = false
 	

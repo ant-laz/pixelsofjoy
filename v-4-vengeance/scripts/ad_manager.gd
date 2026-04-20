@@ -21,6 +21,8 @@ func _ready() -> void:
 		print("on_ad_showed_full_screen_content")
 	on_user_earned_reward_listener.on_user_earned_reward = func(rewarded_item : RewardedItem):
 		print("on_user_earned_reward, rewarded_item: rewarded", rewarded_item.amount, rewarded_item.type)
+	_full_screen_content_callback.on_ad_dismissed_full_screen_content  = func() -> void:
+		print("user clicked the big x button on the ad")
 		emit_signal("reward_granted")
 
 
