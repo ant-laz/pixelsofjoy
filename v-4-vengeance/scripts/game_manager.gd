@@ -44,7 +44,7 @@ func update_stop_watch(time_elapsed):
 	TimerLabel.text = "%02d:%02d:%01d" % [minutes, seconds, msec]
 	
 func update_monster_display():
-	MonsterLabel.text = str(monster_count)
+	MonsterLabel.text = "Enemies killed: " + str(monster_count)
 	
 func trigger_spawn_wave():
 	intensity += 0.5
@@ -69,12 +69,14 @@ func spawn_wave(count, current_max_enemy_lvl):
 		# Pick one of your 3 spawn points
 		var spawn_pos = $SpawnPoints.get_children().pick_random().global_position
 		enemy.global_position = spawn_pos
+		enemy.enemy_died.connect(_on_enemy_died)
 				
 		add_child(enemy)
 
 
 func _on_player_died() -> void:
 	is_stopped = true 
+	$game_over.visible = true
 	# Here we should show the game over screen.
 	print("Player is down! Stopwatch paused.") 
 
@@ -100,3 +102,22 @@ func switch_weapon(scene: PackedScene):
 	# add new weapon
 	var weapon = scene.instantiate()
 	WeaponHolder.add_child(weapon)
+
+
+func _on_give_up_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+
+func _ready() -> void:
+	# load an ad in the background as soon as the game starts
+	AdManager._on_load_pressed()
+	AdManager.reward_granted.connect(_on_reward_granted)
+
+func _on_button_revive_with_ad_pressed() -> void:
+	# if users selects revive with ad, then show the pre-loaded ad
+	AdManager._on_show_pressed()
+
+func _on_reward_granted() -> void:
+	# user watched the ad and now gets their reward
+	Player.health = 100
+	$game_over.visible = false
+	

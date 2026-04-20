@@ -16,3 +16,10 @@ data_*/
 mono_crash.*.json
 
 .DS_Store
+
+# android builds
+v-4-vengeance/android/build/build/*
+v-4-vengeance/android/build/res/*
+v-4-vengeance/android/build/src/*
+v-4-vengeance/android/build/libs/*
+v-4-vengeance/android/build/.gradle/*
