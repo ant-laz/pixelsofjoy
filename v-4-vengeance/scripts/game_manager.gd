@@ -77,8 +77,7 @@ func spawn_wave(count, current_max_enemy_lvl):
 func _on_player_died() -> void:
 	is_stopped = true 
 	$game_over.visible = true
-	# Here we should show the game over screen.
-	print("Player is down! Stopwatch paused.") 
+	get_tree().paused = true
 
 
 func _on_enemy_died() -> void:
@@ -105,6 +104,7 @@ func switch_weapon(scene: PackedScene):
 
 
 func _on_give_up_pressed() -> void:
+	get_tree().paused = false
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
 
 func _ready() -> void:
@@ -119,5 +119,6 @@ func _on_button_revive_with_ad_pressed() -> void:
 func _on_reward_granted() -> void:
 	# user watched the ad and now gets their reward
 	Player.health = 100
+	get_tree().paused = false
 	$game_over.visible = false
 	
