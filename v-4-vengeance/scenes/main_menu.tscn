@@ -8,7 +8,7 @@
 texture = ExtResource("2_bqqt6")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vue75"]
-bg_color = Color(1, 1, 1, 1)
+bg_color = Color(0.20392157, 0.20392157, 0.20392157, 1)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
@@ -75,10 +75,10 @@ theme_override_constants/separation = 18
 [node name="start_game" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1550422378]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 0.07450981, 0.9411765, 1)
+theme_override_colors/font_focus_color = Color(1, 0.07450981, 0.9411765, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.07450981, 0.9411765, 1)
+theme_override_colors/font_hover_color = Color(1, 0.07450981, 0.9411765, 1)
 theme_override_fonts/font = ExtResource("3_wu84c")
 theme_override_font_sizes/font_size = 31
 theme_override_styles/normal = SubResource("StyleBoxFlat_vue75")
